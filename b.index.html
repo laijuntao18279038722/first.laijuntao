@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <style>
+        h1 {
+            font-size: 35px;
+            color: #053df4;
+            text-align: center;
+        }
+        .first {
+            text-indent: 70px;
+            font-weight:bold;
+        }
+        table {
+            font-size: 15px;
+            color: #070707;
+            border-spacing: 50px 25px;
+             margin: 0 auto;
+              background-color: rgb(0, 225, 255);
+        }
+        input[type="text"] {
+            width: 100%;
+            line-height: 35px;
+        }
+        input[type="number"] {
+            width: 100%;
+            line-height: 35px;
+        }
+        input[type="password"] {
+            width: 100%;
+            line-height: 35px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            line-height: 35px;
+            background-color: #2F5DF2;
+            color: #ffffff;
+        }
+        select{
+            height:40px;
+        }
+        .code{
+            width:30%;
+            line-height:35px;
+        }
+        .second{
+            display:flex;
+            justify-content: center;
+            font-size: 20px;
+            color:red;
+        }
+        a:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h1>注册你的学生账号</h1>
+    <form action="javascript:alert('注册成功')">
+        <table>
+            <tr>
+                <td class="first">学院名称</td>
+                <td><input type="text" placeholder="请输入你的学院名"></td>
+            </tr>
+            <tr>
+                <td class="first">学号</td>
+                <td><input type="number" placeholder="10位数" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td class="first">专业名称</td>
+                <td>
+                    <select>
+                        <option>请选择</option>
+                        <option>人工智能</option>
+                        <option>大数据</option>
+                        <option>电信</option>
+                        <option>通信</option>
+                         <option>数应</option>
+                          <option>软工</option>
+                           <option>计科</option>
+                           <option>哈哈</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="first">账户名称</td>
+                <td><input type="text" placeholder="仅可输入英文、数字、下划线组成" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td class="first">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</td>
+                <td><input type="password" placeholder="请输入9~16位密码"></td>
+            </tr>
+            <tr>
+                <td class="first">确认密码</td>
+                <td><input type="password" placeholder="再次输入密码"></td>
+            </tr>
+            <tr>
+                <td class="first">真实姓名</td>
+                <td><input type="text" placeholder="申请人的真实姓名"></td>
+            </tr>
+            <tr>
+                <td class="first">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机</td>
+                <td><input type="text" placeholder="申请人的联系电话"></td>
+            </tr>
+            <tr>
+                <td class="first">短信验证</td>
+                <td>
+                    <input placeholder="请输入6位验证码" class="code">
+                    <a href="javascript:alert('发送成功')">点击发送验证码</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="first">账号类型</td>
+                <td>
+                    <input type="radio" name="type">学生
+                    <input type="radio" name="type">老师
+                </td>
+            </tr>
+            <tr>
+                <td class="first"></td>
+                <td>
+                    <input type="submit" value="确认无误，点击注册">
+                    <input type="checkbox">我已阅读并同意<a href="#">《学生注册协议》</a>
+                </td>
+            </tr>
+            <tr>
+    
+                <td class="second">
+                    <a href="https://laijuntao18279038722.github.io/first.laijuntao/a.index.html"target="_blank">返回官网主页</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div></div>
+</body>
+
+</html>
