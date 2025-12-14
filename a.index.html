@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宜春学院人工智能与信息工程学院官网</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-logo-wrapper {
+  margin:0px;      
+}
+        header {
+            background: linear-gradient(135deg, #e52406, #5109fa);
+            color: rgb(208, 13, 13);
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(250, 2, 2, 0.1);
+             position:sticky;
+            top:0;
+            order:1;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #ffcc00;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff0000;
+        }
+
+        /* 主要内容区域 */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background-image: url('https://sjxy.jxycu.edu.cn/_upload/article/images/ee/41/78ec76ab41f7842f7bfe76210c58/202989ac-594b-4dfe-ae34-b06413a06ce3.jpg');
+            
+            background-size: cover;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: hsl(0, 0%, 0%);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #70462c;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #00e61f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+       .module {
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 20px;
+        }
+        
+        .module-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f30707; /* 主色调蓝色 */
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #04f650;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .more-link {
+            font-size: 14px;
+            color: #36A2EB; /* 辅助色 */
+            text-decoration: none;
+        }
+        .more-link:hover{
+            color: red;
+        }
+        
+        /* 热门资讯模块 */
+        .hot-news {
+            flex: 2;
+        }
+        
+        .hot-news-list {
+            list-style: none;
+        }
+        
+        .hot-news-item {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .hot-news-item:last-child {
+            border-bottom: none;
+        }
+        
+        .hot-news-item a {
+            color: #333;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        
+        .hot-news-item a:hover {
+            color: #ff0000;
+        }
+        
+        /* 学院新闻模块 */
+        .college-news {
+            flex: 4;
+        }
+        
+        .news-list {
+            list-style: none;
+        }
+        
+        .news-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        
+        .news-date {
+            color: #999;
+            font-size: 14px;
+            margin-right: 15px;
+            min-width: 80px;
+        }
+        
+        .news-title {
+            color: #333;
+            text-decoration: none;
+            flex-grow: 1;
+        }
+        
+        .news-title:hover {
+            color: #ff0000;
+        }
+        
+        /* 学工天地模块 */
+        .student-affairs {
+            flex: 3;
+        }
+        
+        .affairs-list {
+            list-style: none;
+        }
+        
+        .affairs-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .affairs-item:last-child {
+            border-bottom: none;
+        }
+        
+        .affairs-date {
+            width: 50px;
+            height: 50px;
+            background-color: #f0f5ff;
+            color: #01539E;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .date-day {
+            font-size: 16px;
+        }
+        
+        .date-month {
+            font-size: 12px;
+        }
+        
+        .affairs-title {
+            color: #333;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        
+        .affairs-title:hover {
+            color: #ff0000;
+        }
+        
+        .affairs-more {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .quick-links {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        
+        .quick-links h2 {
+            color: #ff0000; 
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            padding-left: 10px;
+            border-left: 4px solid #0a66c2; 
+        }
+        
+        
+        .links-container {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 15px; 
+        }
+        
+       
+        .link-btn {
+            flex: 1; 
+            min-width: 120px; 
+            padding: 15px 10px;
+            background-color: #bbd3f7; 
+            border: none;
+            border-radius: 6px;
+            color: #333; 
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+        }
+        
+        
+        .link-btn:hover {
+            background-color: hsl(133, 100%, 50%); 
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #00ff1a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 10px 20px rgb(255, 0, 0);
+        }
+        .back-to-top:hover{
+            background-color: red;
+        }
+        
+       .email{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        justify-content: center;
+        align-items: center;
+       }
+        
+
+       
+    </style>
+</head>
+<body>
+    <div class="header-logo-wrapper" id="home">
+        <img src="https://sjxy.jxycu.edu.cn/_upload/tpl/05/1e/1310/template1310/images/top.png"width="100%"height="100px"alt="校徽">
+    </div>
+    <header>
+        <div class="container header-content">
+            <img src="https://www.jxycu.edu.cn/_upload/tpl/03/ba/954/template954/images/logo.svg">
+            <a href="https://www.jxycu.edu.cn/"target="_blank" class="logo">宜春学院<span>人工智能与信息工程学院</span></a>
+            <nav>
+                <ul>
+                    <li><a href="https://laijuntao18279038722.github.io/first.laijuntao/c.index.html"target="_blank">登入注册</a></li>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#services">新闻</a></li>
+                    <li><a href="#about">天地</a></li>
+                    <li><a href="https://laijuntao18279038722.github.io/first.laijuntao/d.index.html">联系</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>选择宜春学院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成就光明未来</h1>
+            
+            <a href="https://laijuntao18279038722.github.io/first.laijuntao/d.index.html"target="_blank" class="btn">立即联系我们</a>
+        </div>
+    </section>
+<div class="container">
+        
+        <div class="module hot-news">
+            <div class="module-title">
+                热门资讯
+            </div>
+            <ul class="hot-news-list">
+                <li class="hot-news-item">
+                    <a href="https://sjxy.jxycu.edu.cn/2025/1010/c902a144519/page.psp"target="_blank">宜春学院人工智能与信息工程学院2025年紧缺性人才引进公告</a>
+                </li>
+                <li class="hot-news-item">
+                    <a href="https://www.jxycu.edu.cn/2025/0225/c4209a136796/page.htm"target="_blank">宜春学院2025年高层次人才引进公告</a>
+                </li>
+                <li class="hot-news-item">
+                    <a href="https://sjxy.jxycu.edu.cn/2025/1203/c902a147650/page.htm"target="_blank">人工智能与信息工程学院举办数独比赛</a>
+                </li>
+                <li class="hot-news-item">
+                    <a href="https://sjxy.jxycu.edu.cn/2025/1204/c902a147867/page.htm"target="_blank">人工智能与信息工程学院 召开大学生职业规划大赛决赛</a>
+                </li>
+                <li class="hot-news-item">
+                    <a href="https://sjxy.jxycu.edu.cn/2025/1125/c902a147229/page.psp"target="_blank">人工智能与信息工程学院 召开记者站成立大会</a>
+                </li>
+            </ul>
+        </div>
+        
+       
+        <div class="module college-news" id="services">
+            <div class="module-title">
+                学院新闻
+                <a href="https://sjxy.jxycu.edu.cn/902/list.htm"target="_blank" class="more-link">更多新闻</a>
+            </div>
+            <ul class="news-list">
+                <li class="news-item">
+                    <span class="news-date">2025-10-10</span>
+                    <a href="https://sjxy.jxycu.edu.cn/2025/1010/c902a144519/page.psp"target="_blank" class="news-title">宜春学院人工智能与信息工程学院2025年紧缺性人才引进公告</a>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">2025-02-28</span>
+                    <a href="https://www.jxycu.edu.cn/2025/0225/c4209a136796/page.htm"target="_blank" class="news-title">宜春学院2025年高层次人才引进公告</a>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">2025-11-28</span>
+                    <a href="https://sjxy.jxycu.edu.cn/2025/1203/c902a147650/page.htm"target="_blank" class="news-title">人工智能与信息工程学院举办数独比赛</a>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">2025-11-27</span>
+                    <a href="https://sjxy.jxycu.edu.cn/2025/1204/c902a147867/page.htm"target="_blank" class="news-title">人工智能与信息工程学院 召开大学生职业规划大赛决赛</a>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">2025-11-25</span>
+                    <a href="https://sjxy.jxycu.edu.cn/2025/1125/c902a147229/page.psp"target="_blank" class="news-title">人工智能与信息工程学院 召开记者站成立大会</a>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">2025-11-24</span>
+                    <a href="https://sjxy.jxycu.edu.cn/2025/1104/c902a145840/page.psp"target="_blank" class="news-title">人工智能与信息工程学院开展2025级新生行业教育讲座</a>
+                </li>
+            </ul>
+        </div>
+        
+        
+        <div class="module student-affairs" id="about">
+            <div class="module-title">
+                学工天地
+                <a href="https://sjxy.jxycu.edu.cn/747/list.htm"target="_blank" class="more-link">更多+</a>
+            </div>
+            <ul class="affairs-list">
+                <li class="affairs-item">
+                    <div class="affairs-date">
+                        <span class="date-day">18</span>
+                        <span class="date-month">06</span>
+                    </div>
+                    <a href="https://sjxy.jxycu.edu.cn/2025/0621/c747a140574/page.psp"target="_blank" class="affairs-title">宜春学院2025-2026学年校历</a>
+                </li>
+                <li class="affairs-item">
+                    <div class="affairs-date">
+                        <span class="date-day">10</span>
+                        <span class="date-month">06</span>
+                    </div>
+                    <a href="https://sjxy.jxycu.edu.cn/2025/0612/c747a139640/page.psp"target="_blank" class="affairs-title">青年当擎旗，盛世谱华章-我院开展升国旗仪式暨国旗下的思政课活动</a>
+                </li>
+                <li class="affairs-item">
+                    <div class="affairs-date">
+                        <span class="date-day">05</span>
+                        <span class="date-month">06</span>
+                    </div>
+                    <a href="https://sjxy.jxycu.edu.cn/2025/0619/c747a140122/page.psp"target="_blank" class="affairs-title">朱梦雨、罗杰:赶路不问星光，成果不负时光</a>
+                </li>
+                <li class="affairs-item">
+                    <div class="affairs-date">
+                        <span class="date-day">30</span>
+                        <span class="date-month">05</span>
+                    </div>
+                    <a href="https://sjxy.jxycu.edu.cn/2025/0530/c747a139356/page.psp"target="_blank" class="affairs-title">我院举行2025届毕业生毕业典礼</a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="quick-links">
+        <h2>快速通道</h2>
+        <div class="links-container">
+            <button class="link-btn"><a href="https://www.jxycu.edu.cn/"target="_blank" class="affairs-title">宜春学院</a></button>
+            <button class="link-btn"><a href="https://cas.jxycu.edu.cn/lyuapServer/login?service=http://10.0.10.48:4106/shiro-cas"target="_blank" class="affairs-title">OA办公</button></a>
+            <button class="link-btn"><a href="https://jwc.jxycu.edu.cn/"target="_blank" class="affairs-title">教务在线</button></a>
+            <button class="link-btn"><a href="https://cwc.jxycu.edu.cn/"target="_blank" class="affairs-title">财务查询</button></a>
+            <button class="link-btn"><a href="https://lib.jxycu.edu.cn/"target="_blank" class="affairs-title">图书馆</button></a>
+            <button class="link-btn"><a href="http://www.moe.gov.cn/"target="_blank" class="affairs-title">中国教育部</button></a>
+            <button class="link-btn"><a href="about:blank"target="_blank" class="affairs-title">江西省教育网</button></a>
+            <button class="link-btn"><a href="https://kjt.jiangxi.gov.cn/"target="_blank" class="affairs-title">江西省科技厅</button></a>
+            <button class="link-btn"><a href="https://tianyuan.xmu.edu.cn/"target="_blank" class="affairs-title">国家天元数学东南中心</button></a>
+            <button class="link-btn"><a href="https://www.jxnews.com.cn/"target="_blank" class="affairs-title">中国江西网</button></a>
+            <button class="link-btn"><a href="https://laijuntao18279038722.github.io/first.laijuntao/c.index.html"target="_blank" class="affairs-title">管理登录</a></button>
+        </div>
+    </div>
+    <a href="#" class="back-to-top">↑</a>
+<div class="email" id="contact">
+    <p>
+        宜春学院人工智能与信息工程学院 | 电话：0795-3200811 | 邮箱：sjxy@163.com
+    </p>
+</div>   
+
+    
+</body>
+</html>
