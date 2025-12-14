@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生登入页面</title>
+    <style>
+        h1{
+            font-size: 35px;
+            color: #2F5DF2;
+            text-align: center;
+        }
+        table {
+            font-size: 15px;
+            color: #070707;
+            border-spacing: 50px 25px;
+            margin: 0 auto;
+            background-color: rgb(0, 225, 255);
+        }
+        input[type="number"] {
+            width: 100%;
+            line-height: 35px;
+        }
+        input[type="password"] {
+            width: 100%;
+            line-height: 35px;
+        }
+        .first{
+            text-indent:20px;
+            font-weight:bold;
+        }
+        .second{
+            text-indent:250px;
+        }
+        .third{
+             text-align: center;
+        }
+        input[type="submit"] {
+            width: 100%;
+            line-height: 35px;
+            background-color: #2F5DF2;
+            color: #ffffff;
+        }
+        a:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>登入你的学生账号</h1>
+    <form action="javascript:alert('登入成功')">
+        <table>
+            <tr>
+                <td class="first">账号</td>
+                <td><input type="number" placeholder="请输入你的账号"></td>
+            </tr>
+            <tr>
+                <td class="first">学号</td>
+                <td><input type="number" placeholder="请输入你的学号"></td>
+            </tr>
+            <td class="first">密码</td>
+                <td><input type="password" placeholder="请输入你的密码"></td>
+                 <tr>
+                <td class="first"></td>
+                <td>
+                    <input type="checkbox" name="type">自动登入&nbsp;&nbsp;
+                    <input type="checkbox" name="type">记住密码&nbsp;&nbsp;
+                    &nbsp;&nbsp;<a href="https://laijuntao18279038722.github.io/first.laijuntao/d.index.html">找回密码</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="second"></td>
+                <td>
+                    <input type="submit" value="确认无误，点击登入">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://laijuntao18279038722.github.io/first.laijuntao/b.index.html"target="_blank">如果没有账号快戳我</a>
+                </td>  
+            </tr>
+                              
+        </table>
+    </form>
+</body>
+</html>
